@@ -13,6 +13,7 @@
                         <field name="additional_product_id" required="1" options="{'no_create': True}"
                                domain="[('type','=','service')]"/>
                         <field name="wait_time" required="1"/>
+                        <field name="extra_time" required="1"/>
                     </group>
                 </xpath>
             </field>
