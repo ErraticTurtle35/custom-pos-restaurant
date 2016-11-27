@@ -76,7 +76,7 @@ odoo.define('custom_pos_restaurant.floors', function(require){
                 var order = this.get_order();
                 order.add_product(default_product);
             }
-            console.log('add_default_product_to_current_order, baby!', default_product);
+            console.log('add_default_product_to_current_order, baby!');
         },
         get_default_product_id_for_table: function(){
             var order = this.get_order(),
@@ -96,7 +96,7 @@ odoo.define('custom_pos_restaurant.floors', function(require){
             var extra_minutes = Math.abs(minutes_apart - wait_time);
             var extra_product_qty = Math.ceil(extra_minutes / extra_time);
             this.add_extra_product_to_current_order(extra_product_qty);
-            console.log('calculate_extra_product, baby!', default_product);
+            console.log('calculate_extra_product, baby!');
         },
         add_extra_product_to_current_order: function(extra_product_qty){
             var extra_product_id = this.get_extra_product_id_for_table();
@@ -109,7 +109,7 @@ odoo.define('custom_pos_restaurant.floors', function(require){
         },
         get_extra_product_id_for_table: function(){
             var order = this.get_order(),
-            var table = order.table;
+                table = order.table;
             var extraProductId = table.additional_product_id;
             if (extraProductId){
                 return extraProductId[0];
